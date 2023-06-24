@@ -1,11 +1,12 @@
 package com.xxl.xuapi.model.dto.interfaceinfo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.xxl.xuapi.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * 查询请求
@@ -16,51 +17,59 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class InterfaceInfoQueryRequest extends PageRequest implements Serializable {
-
     /**
-     * id
+     * 主键
      */
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
-     * id
+     * 名称
      */
-    private Long notId;
+    private String name;
 
     /**
-     * 搜索词
+     * 描述
      */
-    private String searchText;
+    private String description;
 
     /**
-     * 标题
+     * 接口地址
      */
-    private String title;
+    private String url;
 
     /**
-     * 内容
+     * 请求参数
      */
-    private String content;
+    private String requestParams;
 
     /**
-     * 标签列表
+     * 请求头
      */
-    private List<String> tags;
+    private String requestHeader;
 
     /**
-     * 至少有一个标签
+     * 响应头
      */
-    private List<String> orTags;
+    private String responseHeader;
 
     /**
-     * 创建用户 id
+     * 接口状态（0-关闭，1-开启）
+     */
+    private Integer status;
+
+    /**
+     * 请求类型
+     */
+    private String method;
+
+    /**
+     * 创建人
      */
     private Long userId;
 
     /**
-     * 收藏用户 id
+     * 是否删除(0-未删, 1-已删)
      */
-    private Long favourUserId;
-
-    private static final long serialVersionUID = 1L;
+    private Integer isDelete;
 }

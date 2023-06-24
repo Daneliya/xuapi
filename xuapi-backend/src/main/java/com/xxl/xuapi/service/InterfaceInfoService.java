@@ -10,4 +10,10 @@ import com.xxl.xuapi.model.entity.InterfaceInfo;
  */
 public interface InterfaceInfoService extends IService<InterfaceInfo> {
 
+    /**
+     * 校验
+     * @param interfaceInfo
+     * @param add
+     */
+    void validInterfaceInfo(InterfaceInfo interfaceInfo, boolean add);
 }

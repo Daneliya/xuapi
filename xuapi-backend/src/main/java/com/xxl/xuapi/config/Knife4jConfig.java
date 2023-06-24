@@ -15,6 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * https://doc.xiaominfo.com/knife4j/documentation/get_start.html
  *
  * @author xxl
+ * @link:http://127.0.0.1:端口/api/doc.html
  * @date 2023/6/24 21:13
  */
 @Configuration

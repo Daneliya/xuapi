@@ -3,7 +3,6 @@ package com.xxl.xuapi.model.dto.interfaceinfo;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * 创建请求
@@ -14,20 +13,40 @@ import java.util.List;
 @Data
 public class InterfaceInfoAddRequest implements Serializable {
 
-    /**
-     * 标题
-     */
-    private String title;
 
     /**
-     * 内容
+     * 名称
      */
-    private String content;
+    private String name;
 
     /**
-     * 标签列表
+     * 描述
      */
-    private List<String> tags;
+    private String description;
 
-    private static final long serialVersionUID = 1L;
+    /**
+     * 接口地址
+     */
+    private String url;
+
+    /**
+     * 请求参数
+     */
+    private String requestParams;
+
+    /**
+     * 请求头
+     */
+    private String requestHeader;
+
+    /**
+     * 响应头
+     */
+    private String responseHeader;
+
+    /**
+     * 请求类型
+     */
+    private String method;
+
 }
